@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatrixGen</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css"> <!--Vinculamos el archivo de css-->
+    <link href="https://file.myfontastic.com/czqQzfUYcAAHSfLvUUiqVV/icons.css" rel="stylesheet"> <!--Link iconos-->
+</head>
+<body>
+    <!--header.header>.contenedor>h1.logo+span.icon-menu+nav.nav-->
+    <header class="header">
+        <div class="contenedor">
+            <h1 class="logo">MatrixGen</h1> <!--Titulo de la pagina-->
+            <span class="icon-menu" id="btn-menu"></span> <!--Icono del menu-->
+            <nav class="nav" id="nav"> <!--El id anterior y este se utilizan para el archivo js-->
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link select" href="">Inicio</a></li> <!--Items del menu-->
+                    <li class="menu__item"><a class="menu__link" href="#generador">Generador de matrices identidad</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--.banner>img.banner__img+.contenedor>.h2.banner__titulo+p.banner__txt-->
+    <div class="banner">
+        <img src="img/banner.jpg" alt="" class="banner__img">
+        <div class="contenedor">
+            <div class="h2 banner__titulo">GENERADOR DE MATRICES ONLINE</div>
+            <p class="banner__txt">Por el momento solo podemos generar matrices identidad, pero mas adelante traeremos más opciones.Gracias por usar nuestros servicios</p>
+        </div>
+    </div>
+    <main class="main">
+        <div class="contenedor">
+            <!--section.info>article.info__columna*2>img.info__img[src="img/img1.jpg"]+h2.info__titulo+p.info__txt-->
+            <section class="info">
+                <article class="info__columna">
+                    <a name="generador"><h2 class="info__titulo">GENERE SU MATRIZ</h2></a>
+                    <p class="info__txt">Nota: Las matrices identidad son de tamaño nxn (son cuadradas). Ingrese n (el tamaño de su matriz) en el recuadro y oprima el botón para generar su matriz identidad</p>
+                    <form name="form" class="form">
+                        <p class="form-texto">Ingrese el valor de n: <input class="form-box" type="number" name="nvalue" id="n"></p>
+                        <p><input class="btn-calculate" name="btn-calculate" type="button" value="Calcular" onclick="crearTabla()"></p>
+                        <p><input class="btn-limpiar" name="btn-limpiar" type="reset" value="Limpiar"></p>
+                    </form>
+                </article>
+                <article class="info__columna">
+                    <h2 class="info__titulo">RESULTADO</h2>
+                    <p class="info__txt">Esta es su matriz identidad:</p>
+                    <div class="resultado" id="resultado"></div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <script src="js/menu.js" >
+    </script> <!--Vinculamos el archivo de JavaScript-->
+</body>
+</html>

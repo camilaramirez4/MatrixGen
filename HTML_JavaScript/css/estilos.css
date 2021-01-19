@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');/*Link fuente body*/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@1,700&display=swap');/*Link fuente titulos*/
+
+*{
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2px;
+}
+
+.contenedor{
+    margin: auto;
+}
+
+/*------------------------------Estilos del header------------------------------*/
+
+.header {
+    height: 60px;
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .icon-menu {
+    margin: 5px;
+    color: #fff;
+}
+
+.icon-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: mediumslateblue;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px; /*Esquinas redondeadas*/
+    margin-left: auto;
+    cursor: pointer; /*Al poner el mouse sobre el icono, se vuelve una manito*/
+}
+
+
+/*------------------------------Estilos del menu------------------------------*/
+
+.nav {
+    position: absolute;
+    top: 60px; /*Ponemos los items del menu debajo del titulo de la pagina*/
+    left: -100%; /*Para esconder los items del menu*/
+    width: 100%;
+    transition: all 0.4s; /*Tiempo que se tardan los items del menu apareciendo*/
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link { /*Items del menu*/
+    display: block;
+    padding: 15px;
+    background: mediumslateblue;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__link:hover, .select { /*Cambio del color de los items del menu al pasar el mouse sobre ellos. select para que al abrir la pagina, la opcion de inicio salga iluminada*/
+    background: white;
+    color: mediumslateblue;
+}
+
+.mostrar { /*Para mostrar los items del menu cuando le demos click al boton*/
+    left: 0;
+}
+
+/*------------------------------Estilos del banner------------------------------*/
+
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.banner__txt {
+    display: none;
+}
+
+/*------------------------------Estilos de info------------------------------*/
+
+.info__columna {
+    background:#e8cbf5;
+    color: #fff;
+    padding: 15px;
+}
+
+.info__titulo {
+    text-align: center;
+}
+
+.info__txt {
+    text-align: center;
+    font-size: 17px;
+}
+
+.form{
+    text-align: center;
+    font-size: 20px;
+}
+
+.form-box{
+    font-size: 10px;
+}
+
+.btn-calculate, .btn-limpiar{
+    font-size: 10px;
+    cursor: pointer;
+}
+
+
+.form-texto{
+    color: black;
+}
+
+.resultado{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-calculate:hover { /*Cambio del color del boton al pasar el mouse sobre el*/
+    background: mediumslateblue;
+    color: white;
+}
+
+.btn-limpiar:hover {
+    background: mediumslateblue;
+    color: white;
+}
+
+/*------------------------------Estilos responsive------------------------------*/
+
+@media(min-width:510px) {/*Es responsive a partir de 480 pixeles*/
+    .logo{
+        font-size: 30px;
+    }
+
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .banner__txt{
+        display: block; /*Para que aparezca el texto*/
+        font-size: 18px;
+        margin: 50px;
+    }
+
+    .info__titulo{
+        font-size: 30px;
+    }
+
+    .info__txt{
+        font-size: 20px;
+        margin: 50px;
+    }
+
+    .form{
+        font-size: 30px;
+    } 
+    
+    .form-box, .btn-calculate, .btn-limpiar{
+        font-size: 20px;
+    }
+
+    .resultado{
+        font-size: 25px;
+    }
+
+}
+
+@media(min-width:768px) {
+    .logo, .banner__titulo, .info__titulo{
+        font-size: 40px;
+    }
+
+    .banner__txt{
+        font-size: 28px;
+    }
+
+    .form{
+        font-size: 40px;
+    } 
+    
+    .info__txt, .form-box, .btn-calculate, .btn-limpiar{
+        font-size: 30px;
+    }
+
+    .resultado{
+        font-size: 35px;
+    }
+}
+
+@media(min-width:1024px) {
+    .logo{
+        font-size: 50px;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .header{
+        width: 1400px;
+    }
+
+    .nav{
+        position: static; /*Para que el menu vuelva a su posicion original*/
+        width: auto;
+    }
+
+    .menu{
+        display: flex;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .menu__link{
+        background: none;
+    }
+
+    .select{
+        color: white;
+        background:mediumslateblue;
+    }
+
+    .icon-menu{
+        display: none; /*Para desaparecer el boton menu*/
+    }
+
+    .form{
+        font-size: 50px;
+    } 
+    
+    .form-box, .btn-calculate, .btn-limpiar{
+        font-size: 40px;
+    }
+
+    .resultado{
+        font-size: 45px;
+    }
+
+}
